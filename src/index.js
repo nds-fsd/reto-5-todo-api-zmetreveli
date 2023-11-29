@@ -1,7 +1,6 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const todoRouter = require('./routers/todo');
-
+const todoRouter = require("./routers/todo");
 
 //Le decimos a nuestra app, que vamos recibir peticiones donde el Body contiene texto en formato JSON.
 app.use(express.json());
@@ -11,11 +10,6 @@ app.use(todoRouter);
 
 //a partir de este punto y gracias a la linea escrita mas arriba, si llega alguna peticion que empieze por /todo, está se redirige hacia todoRouter.
 
-
-
-
 app.listen(3000, () => {
-    console.log("Server is up and running in port 3000");
+  console.log("Server is up and running in port 3000");
 });
-
-
